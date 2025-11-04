@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "k8s-auto-dev-platform"
+version = "0.1.0"
+description = "Prototype of a Kubernetes-based intelligent development platform"
+authors = [
+  { name = "cto.new Auto Dev", email = "noreply@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["kubernetes", "automation", "devops", "code-generation"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Build Tools"
+]
+dependencies = []
+
+[project.optional-dependencies]
+yaml = ["PyYAML>=6.0"]
+
+[project.scripts]
+k8s-auto-dev = "k8s_auto_dev_platform.cli:main"
